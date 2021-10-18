@@ -11,11 +11,8 @@ require_once('../common/head.php');
       <h2 class="text-center mb-5 inline-block">Faça seu login</h2>
       <div class="col d-flex justify-content-center ">
 
-        <!-- componente do formulario -->
-        <?php // require_once("./_formLogin.php"); ?>
-
-        <?php require_once("./_signup.php"); ?>
-
+        <!-- componente do login -->
+          <?php require_once("./_formLogin.php"); ?>
       </div>
     </div>
   </div>
