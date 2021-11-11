@@ -1,17 +1,17 @@
-<form method="POST" action="../../controller/login/recover.php">
+<form method="POST" action="../php/recuperarSenha.php">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="email" class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" id="email">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Senha</label>
-    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+    <label for="senha" class="form-label">Senha</label>
+    <input name="senha" type="password" class="form-control" id="senha">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Nova senha</label>
-    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+    <label for="novaSenha" class="form-label">Nova senha</label>
+    <input name="novaSenha" type="password" class="form-control" id="novaSenha">
   </div>
   <div class="d-grid gap-2">
-    <button type="submit" class="btn senac-button-submit text-white btn-lg">Alterar senha</button>
+    <button type="submit" class="btn btn-danger text-white btn-lg">Alterar senha</button>
   </div>
 </form>
