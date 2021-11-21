@@ -17,7 +17,7 @@ $stmt->execute([':email' => $_POST['email']]);
 $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-if ($registro['email'] == $email) {
+if ($registro['email'] == $email && $email == '') {
   die("O email $email já esta cadastrado");
 }
 
