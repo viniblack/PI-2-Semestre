@@ -3,19 +3,19 @@
     <div class="col-6">
       <div class="mb-3">
         <label for="produto" class="form-label">Nome do produto</label>
-        <input name="produto" type="text" class="form-control" id="produto">
+        <input placeholder="Nome do produto" name="produto" type="text" class="form-control" id="produto">
       </div>
     </div>
     <div class="col-6">
       <div class="mb-3">
         <label for="marca" class="form-label">Marca</label>
-        <input name="marca" type="text" class="form-control" id="marca">
+        <input placeholder="Nome da marca" name="marca" type="text" class="form-control" id="marca">
       </div>
     </div>
     <div class="col-12">
       <div class="mb-3">
         <label for="preco" class="form-label">Preço</label>
-        <input name="preco" type="text" class="form-control " id="preco">
+        <input placeholder="22,00" name="preco" type="text" class="form-control " id="preco">
       </div>
     </div>
     <div class="col-12">

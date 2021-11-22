@@ -9,8 +9,8 @@ require_once('./config/connect.php');
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$stmt = $bd->prepare('SELECT id, primeiroNome, email, senha FROM users WHERE email = :email');
-$stmt->execute([':email' => $_POST['email']]);
+$stmt = $bd->prepare('SELECT id_user, primeiroNome, email, senha FROM user WHERE email = :email');
+$stmt->execute([':email' => $email]);
 
 $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 

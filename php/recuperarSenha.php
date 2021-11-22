@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $novaSenha = $_POST['novaSenha'];
 
-$stmt = $bd->prepare('SELECT email FROM users WHERE email = :email');
+$stmt = $bd->prepare('SELECT email FROM user WHERE email = :email');
 $stmt->execute(([':email' => $email]));
 $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -21,7 +21,7 @@ if (!($senha == $novaSenha))  die('A confirmação de senha não confere.');
 $passHash = password_hash($senha, PASSWORD_DEFAULT);
 
 $stmt = $bd->prepare(
-  "UPDATE `users` SET senha = :senha"
+  "UPDATE `user` SET senha = :senha"
 );
 
 $value[':senha'] = $passHash;
