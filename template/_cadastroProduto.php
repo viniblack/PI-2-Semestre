@@ -1,4 +1,4 @@
-<form method="POST" action="../php/cadastroProduto.php" enctype="multipart/form-data">
+<form method="POST" action="./php/cadastroProduto.php" enctype="multipart/form-data">
   <div class="row">
     <div class="col-6">
       <div class="mb-3">
@@ -20,8 +20,8 @@
     </div>
     <div class="col-12">
       <div class="mb-3">
-        <label for="confirmarSenha" class="form-label">Imagem do produto</label>
-        <input name="confirmarSenha" type="file" class="form-control" id="confirmarSenha">
+        <label for="imagemProduto" class="form-label">Imagem do produto</label>
+        <input name="imagemProduto" type="file" class="form-control" id="imagemProduto">
       </div>
     </div>
 
