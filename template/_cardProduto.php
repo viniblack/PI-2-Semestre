@@ -9,6 +9,7 @@ require_once("../php/config/connect.php");
 $stmt = $bd->query('SELECT imagem, preco, nomeProduto, marcaProduto FROM produto');
 $registros = $stmt->fetchAll();
 
+var_dump($registros); die;
 
 foreach ($registros as $registro) :
 ?>
