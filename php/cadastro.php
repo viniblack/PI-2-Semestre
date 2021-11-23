@@ -9,6 +9,7 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $confirmarSenha = $_POST['confirmarSenha'];
 
+
 if (!($senha == $confirmarSenha)) die('A confirmação de senha não confere.');
 
 
@@ -17,15 +18,15 @@ $stmt->execute([':email' => $_POST['email']]);
 $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-if ($registro['email'] == $email && $email == '') {
+if ($registro['email'] == $email) {
   die("O email $email já esta cadastrado");
 }
 
 $stmt = $bd->prepare(
   'INSERT user
-    (primeiroNome, sobrenome, email, senha, id_tipo) 
+    (primeiroNome, sobrenome, email, senha, tipo_conta) 
   VALUES
-   (:primeiroNome, :sobrenome, :email, :senha, :id_tipo)'
+   (:primeiroNome, :sobrenome, :email, :senha, :tipo_conta)'
 );
 
 
@@ -35,7 +36,7 @@ $value[':primeiroNome'] =  $_POST['primeiroNome'];
 $value[':sobrenome'] =  $_POST['sobrenome'];
 $value[':email'] = $email;
 $value[':senha'] = $passHash;
-$value[':id_tipo'] =  $_POST['tipoConta'];
+$value[':tipo_conta'] =  $_POST['tipoConta'];
 
 // echo "<pre>";
 // var_dump($stmt->execute($value)); die;

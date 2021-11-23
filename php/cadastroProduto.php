@@ -10,6 +10,7 @@ require_once("../base_path.php");
 $produto = $_POST['produto'];
 $marca = $_POST['marca'];
 $preco = $_POST['preco'];
+$categoria = $_POST['categoria'];
 
 
 if (isset($_FILES['imagemProduto'])) {
@@ -41,14 +42,15 @@ if (isset($_FILES['imagemProduto'])) {
 }
 
 $stmt = $bd->prepare(
-  'INSERT INTO produto (nomeProduto, marcaProduto, preco, imagem)
-    VALUES (:nomeProduto, :marcaProduto, :preco, :imagem)'
+  'INSERT INTO produto (nomeProduto, marcaProduto, preco, imagem, categoria)
+    VALUES (:nomeProduto, :marcaProduto, :preco, :imagem, :categoria)'
 );
 
 $value[':nomeProduto'] = $produto;
 $value[':marcaProduto'] = $marca;
 $value[':preco'] = $preco;
 $value[':imagem'] = $arquivo;
+$value[':categoria'] = $categoria;
 
 if ($stmt->execute($value)) {
   echo "<br><br>Dados gravados com sucesso!";
