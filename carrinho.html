@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Supermercado Vovó</title>
+    <link rel="icon" href="imagens/logoprovisorio.png">
+</head>
+
+
+
+<body style="min-width: 372px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
+        <div class="container">
+            <a class="navbar-brand" href=""><strong> Mercado vovoZuzu</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white"> Promoções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white"> Contatos</a>
+                    </li>
+                </ul>
+
+                <div class="align-self-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white"> Quero Me Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cliente.php" class="nav-link text-white"> Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">
+                                <img src="imagens/icones/carrinhoB.png" width="25" height="25">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1 class="text-danger">Carrinho de Compras</h1>
+            <hr>
+            <ul class="list-group py-3">
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="imagens/produtos/leite.png" class="img-thumbnail" alt="">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Leite Integral</a></b></h4>
+                            <h4>
+                                <small>
+                                    Leite Integral Longa Vida Ninho
+                                </small>
+                            </h4>
+                        </div>
+                        <div
+                            class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/angulo-da-seta-para-cima.png" width="8">
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="4">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/seta-para-baixo.png" width="8">
+
+                                </button>
+                                <button type="button" class="btn btn-outline-danger border-dark btn-sm">
+                                    <img src="imagens/icones/lixeira.png" width="12" height="13">
+                                </button>
+                            </div>
+                            <div class="text-right mt-2">
+                                <small class="text-dark">Valor Un. R$ 4,99</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="imagens/produtos/cafe.png" class="img-thumbnail" alt="">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Leite Integral</a></b></h4>
+                            <h4>
+                                <small>
+                                    Leite Integral Longa Vida Ninho
+                                </small>
+                            </h4>
+                        </div>
+                        <div
+                            class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/angulo-da-seta-para-cima.png" width="8">
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="4">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/seta-para-baixo.png" width="8">
+
+                                </button>
+                                <button type="button" class="btn btn-outline-danger border-dark btn-sm">
+                                    <img src="imagens/icones/lixeira.png" width="12" height="13">
+                                </button>
+                            </div>
+                            <div class="text-right mt-2">
+                                <small class="text-dark">Valor Un. R$ 4,99</small>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="imagens/produtos/pao.png" class="img-thumbnail" alt="">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Leite Integral</a></b></h4>
+                            <h4>
+                                <small>
+                                    Leite Integral Longa Vida Ninho
+                                </small>
+                            </h4>
+                        </div>
+                        <div
+                            class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/angulo-da-seta-para-cima.png" width="8">
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="4">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/seta-para-baixo.png" width="8">
+
+                                </button>
+                                <button type="button" class="btn btn-outline-danger border-dark btn-sm">
+                                    <img src="imagens/icones/lixeira.png" width="12" height="13">
+                                </button>
+                            </div>
+                            <div class="text-right mt-2">
+                                <small class="text-dark">Valor Un. R$ 4,99</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="imagens/produtos/dolce.png" class="img-thumbnail" alt="">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Leite Integral</a></b></h4>
+                            <h4>
+                                <small>
+                                    Leite Integral Longa Vida Ninho
+                                </small>
+                            </h4>
+                        </div>
+                        <div
+                            class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/angulo-da-seta-para-cima.png" width="8">
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="4">
+                                <button type="button" class="btn border-dark btn-sm">
+                                    <img src="imagens/icones/seta-para-baixo.png" width="8">
+
+                                </button>
+                                <button type="button" class="btn btn-outline-danger border-dark btn-sm">
+                                    <img src="imagens/icones/lixeira.png" width="12" height="13">
+                                </button>
+                            </div>
+                            <div class="text-right mt-2">
+                                <small class="text-dark">Valor Un. R$ 4,99</small>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="text-right">
+                        <h5 class="text-dark mb-3"> Valor Total: R$ 30,90</h5>
+                        <a href="index.php" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
+                        <button class="btn btn-danger btn-lg"> Fechar Pedido</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+</html>
