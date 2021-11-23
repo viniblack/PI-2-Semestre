@@ -1,4 +1,4 @@
-<form method="POST" action="../php/cadastroProduto.php" enctype="multipart/form-data">
+<form method="POST" action="./php/cadastroProduto.php" enctype="multipart/form-data">
   <div class="row">
     <div class="col-6">
       <div class="mb-3">

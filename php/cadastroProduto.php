@@ -11,10 +11,9 @@ $produto = $_POST['produto'];
 $marca = $_POST['marca'];
 $preco = $_POST['preco'];
 
-var_dump($_FILES); die;
 
 if (isset($_FILES['imagemProduto'])) {
-  mime_content_type($_FILES['imagemProduto']['tmp_name']);
+  $tipo = mime_content_type($_FILES['imagemProduto']['tmp_name']);
 
   switch ($tipo) {
     case 'image/jpeg':
@@ -33,10 +32,10 @@ if (isset($_FILES['imagemProduto'])) {
       echo "Tipo de arquivo não aceito!";
       die();
   }
-  $arquivo = __DIR__ . '/imagens/produtos/' . rand(1, 9999999999);
+  $arquivo = 'C:\xampp\htdocs\projeto-pi/imagens/produtos/' . rand(1, 9999999999) . $ext;
 
   move_uploaded_file(
-    $_FILES['upload']['tmp_name'],
+    $_FILES['imagemProduto']['tmp_name'],
     $arquivo
   );
 }
