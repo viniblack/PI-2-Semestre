@@ -20,7 +20,7 @@
 <body style="min-width: 372px;">
     <?php
   
-    require_once('./php/config/session.php');
+    require_once('./config/session.php');
     require_once('./template/_menu.php');
  
     ?>
@@ -79,126 +79,7 @@
                     </div>
                 </div>
                 <!--CARD1-->
-                <div class="row">
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/cafe.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARD2-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/dolce.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARD3-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/leite.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARD4-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/nescau.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARD5-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/pao.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARD6-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex g-4 ">
-                        <div class="card align-items-center p-2 text-center bg-light ">
-                            <img src="imagens/produtos/torrada.jpg" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                <?php include_once('./template/_cardProduto.php') ?>
                 </div>
             </div>
         </div>

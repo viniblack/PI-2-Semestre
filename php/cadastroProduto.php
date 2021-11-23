@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once("./config/connect.php");
-
+require_once("../config/connect.php");
+require_once("../base_path.php");
 
 $produto = $_POST['produto'];
 $marca = $_POST['marca'];
@@ -32,7 +32,7 @@ if (isset($_FILES['imagemProduto'])) {
       echo "Tipo de arquivo não aceito!";
       die();
   }
-  $arquivo = 'C:\xampp\htdocs\projeto-pi/imagens/produtos/' . rand(1, 9999999999) . $ext;
+  $arquivo = BASE_PATH . '/imagens/produtos/' . rand(1, 9999999999) . $ext;
 
   move_uploaded_file(
     $_FILES['imagemProduto']['tmp_name'],

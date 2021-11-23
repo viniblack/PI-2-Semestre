@@ -25,6 +25,10 @@
           <li class="nav-item">
             <a href="./login.php" class="nav-link text-white">Entrar</a>
           </li>
+
+          <li class="nav-item">
+            <a href="./cadastroProduto.php" class="nav-link text-white">Cadastrar produto</a>
+          </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link text-white">
               <img src="imagens/icones/carrinhoB.png" width="25" height="25">
