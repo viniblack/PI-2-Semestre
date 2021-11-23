@@ -20,8 +20,8 @@
     </div>
     <div class="col-12">
       <div class="mb-3">
-        <label for="confirmarSenha" class="form-label">Imagem do produto</label>
-        <input name="confirmarSenha" type="file" class="form-control" id="confirmarSenha">
+        <label for="imagemProduto" class="form-label">Imagem do produto</label>
+        <input name="imagemProduto" type="file" class="form-control" id="imagemProduto">
       </div>
     </div>
 
