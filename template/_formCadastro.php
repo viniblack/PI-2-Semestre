@@ -1,4 +1,4 @@
-<form method="POST" action="../php/cadastro.php">
+<form method="POST" action="./php/cadastro.php">
   <div class="row">
     <div class="col-6">
       <div class="mb-3">
