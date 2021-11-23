@@ -12,7 +12,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <small><a href="../cadastro.php">Cadastrar-se</a></small>
+      <small><a href="./cadastro.php">Cadastrar-se</a></small>
     </div>
     <div class="col">
       <small><a href="./recuperarSenha.php">Esqueceu a senha?</a></small>

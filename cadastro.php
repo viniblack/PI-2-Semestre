@@ -21,7 +21,6 @@
 <body style="min-width: 372px;">
 
     <?php
-    require_once('./php/config/session.php');
     require_once('./template/_menu.php');
     ?>
     <main class="mb-5 pb-5 mb-md-0">

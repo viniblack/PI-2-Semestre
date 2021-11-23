@@ -21,13 +21,14 @@ if (!($senha == $novaSenha))  die('A confirmação de senha não confere.');
 $passHash = password_hash($senha, PASSWORD_DEFAULT);
 
 $stmt = $bd->prepare(
-  "UPDATE `user` SET senha = :senha"
+  "UPDATE `user` SET senha = :senha WHERE email = :email"
 );
 
 $value[':senha'] = $passHash;
+$value[':email'] = $email;
 
 if ($stmt->execute($value)) {
-  header("location:../../index.php");
+  header("location:../index.php");
 } else {
   echo "<br><br>Oh no!! Não consegui gravar no banco :-(";
 }

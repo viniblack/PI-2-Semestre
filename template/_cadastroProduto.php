@@ -20,8 +20,8 @@
     </div>
     <div class="col-6">
       <div class="mb-3">
-        <label for="preco" class="form-label">Categorias</label>
-        <select name="categoria" class="form-select" >
+        <label for="categoria" class="form-label">Categorias</label>
+        <select id="categoria" name="categoria" class="form-select" >
           <option selected>Escolha a categoria</option>
           <option value="1">Promoções</option>
           <option value="2">Bebidas</option>
@@ -29,7 +29,6 @@
           <option value="4">Laticínios</option>
           <option value="5">Limpeza</option>
           <option value="6">Mercearia</option>
-          <option value="7">Perfumaria</option>
         </select>
       </div>
     </div>
