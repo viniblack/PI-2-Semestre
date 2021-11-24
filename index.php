@@ -18,10 +18,11 @@
 
 <body style="min-width: 372px;">
     <?php
-
+ 
     require_once('./config/session.php');
     require_once('./template/_menu.php');
 
+    
     ?>
 
     <div class="container">
