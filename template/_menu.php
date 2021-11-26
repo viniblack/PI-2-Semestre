@@ -23,8 +23,6 @@ require_once('./config/session.php');
 
         <div class="align-self-end">
           <ul class="navbar-nav">
-
-
             <?php
             if (empty($_SESSION)) :
             ?>
@@ -47,6 +45,9 @@ require_once('./config/session.php');
               <?php
               endif
               ?>
+              <li class="nav-item">
+                <span class="nav-link text-white">Olá, <?= $_SESSION['nome'] ?></span>
+              </li>
               <li class="nav-item">
                 <a href="./php/logout.php" class="nav-link text-white">
                   <img src="imagens/icones/logout.svg" width="20" height="25">
