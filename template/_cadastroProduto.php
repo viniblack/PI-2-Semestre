@@ -43,7 +43,7 @@
       <div class="col-10">
         <div class="mb-3">
           <label for="imagemProduto" class="form-label">Imagem do produto</label>
-          <input name="imagemProduto" type="file" class="form-control" id="imagemProduto">
+          <input value="<?php echo $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
         </div>
       </div>
       <div class="col-2 mb-3">

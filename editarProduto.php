@@ -11,18 +11,36 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="icon" href="imagens/logoprovisorio.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
 
   <link href="./css/style.css" rel="stylesheet">
   <title>Editar produto - Supermercado Vovó</title>
+
+  <script>
+    $(document).ready(function() {
+      $('#preco').mask('000.000,00', {
+        reverse: true
+      });
+
+      $("#preco").change(function() {
+        $("#value").html($(this).val().replace(/\D/g, ''))
+      })
+
+    });
+  </script>
 </head>
 
 <?php
+
+include('./config/session.php');
 
 require_once("./config/connect.php");
 
 require_once('./php/Produto.class.php');
 
 $objProduto = new Produto($bd);
+
 ?>
 
 

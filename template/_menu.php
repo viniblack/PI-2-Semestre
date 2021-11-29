@@ -1,5 +1,5 @@
 <?php
-require_once('./config/session.php');
+if (!isset($_SESSION)) session_start();
 ?>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
@@ -41,6 +41,9 @@ require_once('./config/session.php');
               ?>
                 <li class="nav-item">
                   <a href="./cadastroProduto.php" class="nav-link text-white">Cadastrar produto</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./editarProduto.php" class="nav-link text-white">Editar Produto</a>
                 </li>
               <?php
               endif
