@@ -1,5 +1,5 @@
 <div class="col-12">
-  <a href="../cadastroProduto.php"><button class="btn btn-primary">Novo produto</button></a>
+  <a href="./cadastroProduto.php"><button class="btn btn-primary">Novo produto</button></a>
 </div>
 <div class="col-12">
   <?php
@@ -63,32 +63,29 @@
     </thead>
     <tbody>
       <?php
-            foreach ($lista as $id => $produto) :
-            ?>
-        <tr>
-          <td><?php echo $id; ?></td>
-          <td><?php echo $produto['nomeProduto']; ?></td>
-          <td><?php echo $produto['marcaProduto']; ?></td>
-          <td><?php echo $produto['preco']; ?></td>
-          <td><?php echo $produto['nome_categoria']; ?></td>
-          <td><img src="<?php echo $produto['imagem'] ?>" alt="produto1" class="rounded" width="120"></td>
-          <td><button name="editar" class="btn btn-secondary" value="<?php echo $id; ?>">Editar</button></td>
-          <td><button name="apagar" class="btn btn-danger" value="<?php echo $id; ?>">Apagar</button></td>
-        </tr>
-      <?php
-            endforeach
+      if (is_null($lista)) {
       ?>
-      <!-- <tr>
-        <td> Teste de tudo</td>
-        <td> Teste de tudo</td>
-        <td> Teste de tudo</td>
-        <td> Teste de tudo</td>
-        <td> Teste de tudo</td>
-        <td> Teste de tudo</td>
-
-        <td><button name="editar" class="btn btn-secondary" value="<?php echo $id; ?>">Editar</button></td>
-        <td><button name="apagar" class="btn btn-danger" value="<?php echo $id; ?>">Apagar</button></td>
-      </tr> -->
+        <td class="text-center fs-2" colspan="8">Sem registro de produtos</td>
+        <?php
+      } else {
+        foreach ($lista as $id => $produto) :
+        ?>
+          <tr>
+            <td><?php echo $id; ?></td>
+            <td><?php echo $produto['nomeProduto']; ?></td>
+            <td><?php echo $produto['marcaProduto']; ?></td>
+            <td><?php echo $produto['preco']; ?></td>
+            <td><?php echo $produto['nome_categoria']; ?></td>
+            <td><img src="<?php echo $produto['imagem'] ?>" alt="produto1" class="rounded" width="120"></td>
+            <td><button name="editar" class="btn btn-secondary" value="<?php echo $id; ?>">Editar</button></td>
+            <td><button name="apagar" class="btn btn-danger" value="<?php echo $id; ?>">Apagar</button></td>
+          </tr>
+        <?php
+        endforeach
+        ?>
+      <?php
+      }
+      ?>
     </tbody>
   </table>
 </form>

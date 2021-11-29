@@ -31,6 +31,21 @@ class Produto
       $lista[$registro['id_produto']] = $registro;
     }
 
-    return $lista;
+    if (isset($lista)) {
+
+      return $lista;
+    }
+  }
+
+  function apagar($id)
+  {
+    $id = preg_replace('/\D/', '', $id);
+
+    if ($this->bd->query("DELETE FROM produto WHERE id_produto = $id")) {
+      header("location:./editarProduto.php");
+      return true;
+    } else {
+      return false;
+    }
   }
 }
