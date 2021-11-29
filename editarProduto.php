@@ -51,14 +51,15 @@ $objProduto = new Produto($bd);
             include_once './template/_cadastroProduto.php';
           }
 
-          //   if(isset($_POST['id'])){//Se existir o $_POST['id'] que vem do form de edição, faça
+          if (isset($_POST['id'])) { //Se existir o $_POST['id'] que vem do form de edição, faça
 
-          //     if(is_numeric($_POST['id'])){//Verifique se é numérico
+            if (is_numeric($_POST['id'])) { //Verifique se é numérico
 
-          //         //Salve a alteração
-          //         $alterado = $objProduto->salvar($_POST);
-          //     }
-          // }
+              //Salve a alteração
+              $alterado = $objProduto->salvar($_POST);
+            }
+          }
+
           if (!isset($_POST['editar'])) {
             $lista = $objProduto->listar();
             require_once('./template/_lista.php');
