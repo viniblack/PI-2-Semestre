@@ -37,14 +37,32 @@ $objProduto = new Produto($bd);
         <h2 class="text-center mb-5 inline-block">Editar Produto</h2>
         <div class="row">
           <?php
-          $lista = $objProduto->listar();
 
           if (isset($_POST['apagar'])) {
 
             $apagado = $objProduto->apagar($_POST['apagar']);
           }
 
-          require_once('./template/_lista.php');
+          if (isset($_POST['editar'])) {
+            $d = $objProduto->listar($_POST['editar']);
+
+            $produto = $d[$_POST['editar']];
+
+            include_once './template/_cadastroProduto.php';
+          }
+
+          //   if(isset($_POST['id'])){//Se existir o $_POST['id'] que vem do form de edição, faça
+
+          //     if(is_numeric($_POST['id'])){//Verifique se é numérico
+
+          //         //Salve a alteração
+          //         $alterado = $objProduto->salvar($_POST);
+          //     }
+          // }
+          if (!isset($_POST['editar'])) {
+            $lista = $objProduto->listar();
+            require_once('./template/_lista.php');
+          }
           ?>
         </div>
       </div>
