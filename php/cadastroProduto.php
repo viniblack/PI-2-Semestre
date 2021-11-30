@@ -12,8 +12,7 @@ $marca = $_POST['marca'];
 $preco = $_POST['preco'];
 $categoria = $_POST['categoria'];
 
-echo "<pre>";
-var_dump($_FILES); die;
+
 if (isset($_FILES['imagemProduto'])) {
   $tipo = mime_content_type($_FILES['imagemProduto']['tmp_name']);
 

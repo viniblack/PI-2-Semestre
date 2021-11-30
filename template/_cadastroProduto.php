@@ -25,6 +25,27 @@
     </div>
     <div class="col-6">
       <div class="mb-3">
+        <?php
+        $categoriaPHP = $produto['nome_categoria'];
+        ?>
+        <script>
+          <?= "let categoriaJS = '$categoriaPHP';";
+          ?>
+
+          $(document).ready(function() {
+            let select = document.getElementById('categoria');
+            let selecionado = select.options
+            // [select.selectedIndex].value;
+            let posicao;
+            for(let i = 0; i <= selecionado.length; i++){
+              console.log( select.options[i].textContent);
+              posicao += select.options[i]
+            }
+            console.log(selecionado);
+            console.log(categoriaJS);
+            console.log(posicao);
+          });
+        </script>
         <label for="categoria" class="form-label">Categorias</label>
         <select id="categoria" name="categoria" class="form-select">
           <option selected>Escolha a categoria</option>
@@ -57,7 +78,7 @@
       <div class="col-12">
         <div class="mb-3">
           <label for="imagemProduto" class="form-label">Imagem do produto</label>
-          <input name="imagemProduto" type="file" class="form-control" id="imagemProduto">
+          <input value="<?php $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
         </div>
       </div>
     <?php
