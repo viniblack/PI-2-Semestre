@@ -18,10 +18,10 @@
 
 <body style="min-width: 372px;">
     <?php
- 
+
     require_once('./template/_menu.php');
 
-    
+
     ?>
 
     <div class="container">
@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="row">
                     <!--CARDS-->
-                    <?php require_once('./template/_cardProduto.php') ?>
+                    <?php require('./template/_cardProduto.php') ?>
                 </div>
             </div>
         </div>
@@ -134,129 +134,10 @@
             <!--CARDSADIA1-->
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia1.jpg" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARDSADIA2-->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia2.jpg" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARDSADIA3-->
-
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia3.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARDSADIA4-->
-
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia4.jpg" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARDSADIA5-->
-
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia5.png" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--CARDSADIA6-->
-
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-                        <div class="card align-items-center p-2 text-center bg-light">
-                            <img src="imagens/produtos/sadia6.jpg" alt="produto1" class="rounded" width="160">
-                            <div class="cost mt-3 text-dark">
-                                <span>R$4,90</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Açucar</h5>
-                                <p class="card-text"> Açucar Refinado União</p>
-                            </div>
-                            <div class="card-footer">
-                                <form class="d-block">
-                                    <button class="btn btn-danger">
-                                        Adicionar ao carrinho
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    <!--CARDS-->
+                    <?php require('./template/_cardProduto.php') ?>
+                </div>
+            </div>
         </section>
 
 
