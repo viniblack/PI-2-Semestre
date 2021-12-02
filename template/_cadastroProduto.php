@@ -25,7 +25,35 @@
     </div>
     <div class="col-6">
       <div class="mb-3">
-       
+        <?php
+        if (isset($produto)) :
+          $categoriaPHP = $produto['nome_categoria'];
+
+        ?>
+          <script>
+            <?= "let categoriaJS = '$categoriaPHP';";
+            ?>
+
+            $(document).ready(function() {
+              let select = document.getElementById('categoria');
+              let selecionado = select.options
+              // console.log(select);
+              let posicao = [];
+
+              for (let i = 0; i <= selecionado.length; i++) {
+                posicao.push(select.options[i].textContent);
+
+                if (posicao[i] == categoriaJS) {
+                  select.options[i].defaultSelected = true;
+
+                }
+
+              }
+            });
+          </script>
+        <?php
+        endif
+        ?>
         <label for="categoria" class="form-label">Categorias</label>
         <select id="categoria" name="categoria" class="form-select">
           <option selected>Escolha a categoria</option>
@@ -44,27 +72,45 @@
       <div class="col-10">
         <div class="mb-3">
           <label for="imagemProduto" class="form-label">Imagem do produto</label>
-          <input value="<?php echo $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
+          <input id="img-input" value="<?php echo $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
         </div>
       </div>
       <div class="col-2 mb-3">
-        <div>
-          <img class="img-thumbnail" src="<?= $produto['imagem'] ?>" alt="">
+        <div id="img-container" >
+          <img style="width: 200px" id="preview" class="img-thumbnail" src="<?= $produto['imagem'] ?>" alt="">
         </div>
       </div>
+      
     <?php
     else :
     ?>
-      <div class="col-12">
+      <div class="col-10">
         <div class="mb-3">
           <label for="imagemProduto" class="form-label">Imagem do produto</label>
-          <input value="<?php $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
+          <input id="img-input" value="<?php echo $produto['imagem'] ?>" name="imagemProduto" type="file" class="form-control" id="imagemProduto">
+        </div>
+      </div>
+      <div class="col-2 mb-3">
+        <div id="img-container">
+          <img style="width: 200px" id="preview" src="">
         </div>
       </div>
     <?php
     endif
     ?>
 
+    <script>
+      function readImage() {
+        if (this.files && this.files[0]) {
+          var file = new FileReader();
+          file.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+          };
+          file.readAsDataURL(this.files[0]);
+        }
+      }
+      document.getElementById("img-input").addEventListener("change", readImage, false);
+    </script>
 
     <div class="d-grid gap-2">
       <input type="hidden" name="id" value="<?php echo $produto['id_produto'] ?? ''; ?>">

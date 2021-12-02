@@ -21,12 +21,23 @@
             $('#preco').mask('000.000,00', {
                 reverse: true
             });
-            
+
             $("#preco").change(function() {
                 $("#value").html($(this).val().replace(/\D/g, ''))
             })
-            
+
         });
+
+        function readImage() {
+            if (this.files && this.files[0]) {
+                var file = new FileReader();
+                file.onload = function(e) {
+                    document.getElementById("preview").src = e.target.result;
+                };
+                file.readAsDataURL(this.files[0]);
+            }
+        }
+        document.getElementById("img-input").addEventListener("change", readImage, false);
     </script>
     <title>Cadastrar Produto - Supermercado Vovó</title>
 </head>
@@ -40,7 +51,7 @@
     ?>
     <main class="mb-5 pb-5 mb-md-0">
         <div class="container">
-            <div class="row mx-auto bg-white w-50 py-5 rounded d-flex justify-content-center">
+            <div class="row mx-auto bg-white py-5 rounded d-flex justify-content-center">
                 <h2 class="text-center mb-5 inline-block">Cadastro de produto</h2>
                 <div class="col d-flex justify-content-center ">
 

@@ -13,12 +13,12 @@ if (!isset($_SESSION)) session_start();
           <li class="nav-item">
             <a href="./index.php" class="nav-link text-white">Home</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link text-white">Promoções</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link text-white">Contatos</a>
-          </li>
+          </li> -->
         </ul>
 
         <div class="align-self-end">
