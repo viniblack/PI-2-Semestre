@@ -1,4 +1,11 @@
-<form method="POST" action="./php/cadastroProduto.php" enctype="multipart/form-data">
+<form method="POST" action="
+<?php
+if (isset($produto)) {
+  echo './php/updateProduto.php';
+} else {
+  echo "./php/cadastroProduto.php";
+}
+?>" enctype="multipart/form-data">
   <div class="row">
     <div class="col-6">
       <?php
@@ -66,6 +73,13 @@
         </select>
       </div>
     </div>
+    <div class="col-12">
+      <div class="mb-3 d-flex flex-column">
+        <label for="marca" class="form-label">Descrição do produto</label>
+        <textarea name="descricao" id="descricao" cols="1" rows="5"><?php echo $produto['descricao'] ?? '' ?></textarea>
+      </div>
+    </div>
+
     <?php
     if (isset($produto)) :
     ?>
@@ -76,11 +90,11 @@
         </div>
       </div>
       <div class="col-2 mb-3">
-        <div id="img-container" >
+        <div id="img-container">
           <img style="width: 200px" id="preview" class="img-thumbnail" src="<?= $produto['imagem'] ?>" alt="">
         </div>
       </div>
-      
+
     <?php
     else :
     ?>

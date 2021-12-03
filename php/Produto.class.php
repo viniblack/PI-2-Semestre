@@ -21,7 +21,8 @@ class Produto
               P.nomeProduto,
               P.marcaProduto,
               P.preco,
-              P.imagem, 
+              P.imagem,
+              P.descricao,
               CP.nome_categoria
             FROM produto P
             INNER JOIN categoria_produto CP
@@ -100,7 +101,6 @@ class Produto
       categoria = :categoria
     WHERE
       id_produto = :id_produto
-
     ");
 
     $stmt->bindParam(':nomeProduto', $nomeProduto);

@@ -11,7 +11,7 @@ $registros = $stmt->fetchAll();
 foreach ($registros as $registro) :
 ?>
   <div class="col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-    <div class="card align-items-center p-2 text-center bg-light">
+    <div class="card align-items-center p-2 text-center bg-light w-100">
       <img src="<?php echo $registro['imagem'] ?>" alt="produto1" class="rounded" width="160">
       <div class="cost mt-3 text-dark">
         <span>

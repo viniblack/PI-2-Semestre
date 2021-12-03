@@ -16,6 +16,7 @@ $query = $bd->query("SELECT
           P.marcaProduto,
           P.preco,
           P.imagem,
+          P.descricao,
           CP.nome_categoria
         FROM produto P
         INNER JOIN categoria_produto CP
@@ -28,21 +29,23 @@ $registros = $query->fetchAll();
 foreach ($registros as $registro) :
 
 ?>
-  <div class="row g-3">
-    <div class="col-12 col-sm-6">
+  <div class="row single-product-area d-flex justify-content-center mt-5">
+    <div class="col-3">
       <br class="clearfix">
-      <div class="row my-3 gx-3">
-        <div class="col-3">
-          <img src="<?= $registro['imagem'] ?>" class="img-thumbnail">
-        </div>
+      <div class="col-3">
+        <img src="<?= $registro['imagem'] ?>" class="">
       </div>
+
     </div>
-    <div class="col-12 col-sm-6">
-      <h1><?= $registro['nomeProduto'] ?></h1>
-      <p>
-        <?= $registro['marcaProduto'] ?>
-      </p>
-      <p>
+    <div class="col-6">
+      <div class="mb-4">
+        <h1 class="text-capitalize"><?= $registro['nomeProduto'] ?> - <?= $registro['marcaProduto'] ?></h1>
+      </div>
+      <div>
+        <p class="">
+          <?php echo $registro['descricao']  ?>
+        </p>
+      </div>
     </div>
   </div>
 <?php
