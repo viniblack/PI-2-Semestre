@@ -5,19 +5,14 @@ error_reporting(E_ALL);
 
 require_once("./config/connect.php");
 
-$stmt = $bd->query('SELECT imagem, preco, nomeProduto, marcaProduto FROM produto');
+$stmt = $bd->query('SELECT id_produto,imagem, preco, nomeProduto, marcaProduto FROM produto');
 $registros = $stmt->fetchAll();
 
 foreach ($registros as $registro) :
-
-  $quebraURL = explode('\\', $registro['imagem']);
-  unset($quebraURL[0], $quebraURL[1], $quebraURL[2]);
-  $transformaArrayString = implode($quebraURL);
-
 ?>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
-    <div class="card align-items-center p-2 text-center bg-light">
-      <img src="<?php echo"http://localhost/{$transformaArrayString}" ?>" alt="produto1" class="rounded" width="160">
+  <div class="col-lg-3 col-md-4 col-sm-6 d-flex text-center g-4">
+    <div class="card align-items-center p-2 text-center bg-light w-100">
+      <img src="<?php echo $registro['imagem'] ?>" alt="produto1" class="rounded" width="160">
       <div class="cost mt-3 text-dark">
         <span>
           R$
@@ -40,8 +35,10 @@ foreach ($registros as $registro) :
       </div>
       <div class="card-footer">
         <form class="d-block">
-          <button class="btn btn-danger">
-            Adicionar ao carrinho
+          <button class="btn btn-danger" value="<?= $registro['id_produto'] ?>">
+            <a class="nav-link text-white" href="./produto.php?id=<?= $registro['id_produto'] ?>">
+              Ver produto
+            </a>
           </button>
         </form>
       </div>

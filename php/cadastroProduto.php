@@ -11,6 +11,7 @@ $produto = $_POST['produto'];
 $marca = $_POST['marca'];
 $preco = $_POST['preco'];
 $categoria = $_POST['categoria'];
+$descricao = $_POST['descricao'];
 
 
 if (isset($_FILES['imagemProduto'])) {
@@ -33,24 +34,29 @@ if (isset($_FILES['imagemProduto'])) {
       echo "Tipo de arquivo não aceito!";
       die();
   }
-  $arquivo = BASE_PATH . '/imagens/produtos/' . rand(1, 9999999999) . $ext;
+  $arquivo =  rand(1, 9999999999) . $ext;
+  $arquivoMover = BASE_PATH . '/imagens/produtos/' . $arquivo;
+  $arquivoURL = "http://localhost/projeto-pi/imagens/produtos/" . $arquivo;
+
 
   move_uploaded_file(
     $_FILES['imagemProduto']['tmp_name'],
-    $arquivo
+    $arquivoMover
   );
 }
 
 $stmt = $bd->prepare(
-  'INSERT INTO produto (nomeProduto, marcaProduto, preco, imagem, categoria)
-    VALUES (:nomeProduto, :marcaProduto, :preco, :imagem, :categoria)'
+  'INSERT INTO produto (nomeProduto, marcaProduto, preco, imagem, categoria, descricao)
+    VALUES (:nomeProduto, :marcaProduto, :preco, :imagem, :categoria, :descricao)'
 );
 
 $value[':nomeProduto'] = $produto;
 $value[':marcaProduto'] = $marca;
 $value[':preco'] = $preco;
-$value[':imagem'] = $arquivo;
+$value[':imagem'] = $arquivoURL;
 $value[':categoria'] = $categoria;
+$value[':descricao'] = $descricao;
+
 
 if ($stmt->execute($value)) {
   echo "<br><br>Dados gravados com sucesso!";
